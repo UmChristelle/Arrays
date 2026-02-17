@@ -28,3 +28,19 @@ console.log(inventory);
 //e
 inventory.splice(1, 1, 25, 35);
 console.log(inventory);
+//Exercise 3 : shallow copying and reference types
+//a
+const originalScores = [90, 85, 78];
+//b
+const referenceCopy = originalScores;
+console.log(referenceCopy);
+//c
+referenceCopy[0] = 100;
+console.log(originalScores);
+console.log(referenceCopy);
+//d
+const spreadCopy = [...originalScores];
+//e
+spreadCopy[spreadCopy.length - 1] = 50;
+console.log(originalScores);
+console.log(spreadCopy);

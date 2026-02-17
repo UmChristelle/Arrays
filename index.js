@@ -55,3 +55,17 @@ console.log(studentNames.lastIndexOf("Alice"));
 console.log(studentNames.includes("Charlie"));
 //d
 console.log(studentNames.includes("Eve"));
+//Exercises 5 : Advanced Search with Conditionals (find, findIndex)
+const products = [
+  { id: 1, name: "Laptop", price: 999},
+  { id: 2, name: "smartphone", price: 499 },
+  { id: 3, name: "tablet", price: 299 },
+  { id: 4, name: "Headphones", price: 199 }
+];
+//a
+let foundproduct = products.find(product => product.id === 2);
+console.log(foundproduct);
+//b
+ let foundindex = products.findIndex(product => product.price > 1000)
+console.log(foundindex);
+//console.log(products.findIndex(p => p.price > 1000));

@@ -250,5 +250,33 @@ console.log(sums);
   console.log(company);
   console.log(deepCopy);
 }
+//Final Challenge
+//Project: Tic-Tac-Toe Board Analyzer
+let board = [
+  ["", "", ""],
+  ["", "", ""],
+  ["", "", ""]
+];
+
+board[0][0] = "X";
+board[1][1] = "O";
+
+function checkWin(board, symbol) {
+  for (let i = 0; i < 3; i++) {
+    if (board[i].every(cell => cell === symbol)) return true;
+  }
+
+  for (let j = 0; j < 3; j++) {
+    if (board[0][j] === symbol && board[1][j] === symbol && board[2][j] === symbol) return true;
+  }
+
+  if (board[0][0] === symbol && board[1][1] === symbol && board[2][2] === symbol) return true;
+  if (board[0][2] === symbol && board[1][1] === symbol && board[2][0] === symbol) return true;
+
+  return false;
+}
+
+console.log(checkWin(board, "X"));
+console.log(checkWin(board, "O"));
 
 

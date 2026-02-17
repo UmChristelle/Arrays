@@ -204,3 +204,17 @@ console.log(aver);
 //c
 const topScorer = students.reduce((top, s) => s.score > top.score ? s : top, students[0]);
 console.log(topScorer);
+// project 2 : Shopping Cart Management
+let cart = [
+  { id: 1, name: "Shirt", price: 20, quantity: 2 },
+  { id: 2, name: "Pants", price: 50, quantity: 1 }
+];
+//a
+const totalCosts = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+console.log(totalCosts);
+//b
+cart = cart.map(item => item.id === 1 ? { ...item, quantity: 3 } : item);
+console.log(cart);
+//c
+cart = cart.filter(item => item.id !== 2);
+console.log(cart);

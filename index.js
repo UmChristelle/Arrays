@@ -234,3 +234,21 @@ function myReduce(array, callback, initialValue) {
 
 const sums = myReduce([1, 2, 3, 4, 5], (acc, val) => acc + val, 0);
 console.log(sums);
+//Challenge 3: Shallow vs. Deep Copy for Nested Objects
+{
+  const company = [{ name: "A", details: { city: "NY" } }];
+  const spreadCopy = [...company];
+  spreadCopy[0].details.city = "LA";
+  console.log(company);
+  console.log(spreadCopy);
+}
+
+{
+  const company = [{ name: "A", details: { city: "NY" } }];
+  const deepCopy = JSON.parse(JSON.stringify(company));
+  deepCopy[0].details.city = "LA";
+  console.log(company);
+  console.log(deepCopy);
+}
+
+

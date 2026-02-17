@@ -176,3 +176,31 @@ let gameBoard = [
 gameBoard[1][1] = 1;
 //c
 console.log(gameBoard[0][2]);
+// Exercises 16 Looping Through a Matrix
+let sum = 0;
+
+for (let a = 0; a < gameBoard.length; a++) { //a
+  for (let b = 0; b < gameBoard[a].length; b++) { //b
+    console.log(gameBoard[a][b]);
+    sum += gameBoard[a][b];
+  }
+}
+
+console.log("Sum of all elements:", sum);
+
+//project 1 : Student Result System
+const students = [
+  { name: "A", score: 85 },
+  { name: "B", score: 45 },
+  { name: "C", score: 92 },
+  { name: "D", score: 68 }
+];
+//a
+const passed = students.filter(s => s.score >= 70);
+console.log(passed);
+//b
+const aver = students.reduce((sum, s) => sum + s.score, 0) / students.length;
+console.log(aver);
+//c
+const topScorer = students.reduce((top, s) => s.score > top.score ? s : top, students[0]);
+console.log(topScorer);

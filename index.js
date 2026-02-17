@@ -98,3 +98,9 @@ console.log(arr1.concat(arr2));
 console.log(sentenceParts.join(" "));
 //c
 console.log(sentenceParts.slice(1, 4));
+// Exercises 9 : Flattening Arrays (flat)
+const nestedList = [1, [2, 3], [4, [5, 6]], 7];
+//a
+console.log(nestedList.flat());
+//b
+console.log(nestedList.flat(Infinity));

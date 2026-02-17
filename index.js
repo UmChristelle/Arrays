@@ -153,3 +153,15 @@ console.log(sortedByAge);
 //b
 let sortedByAgeThenName = [...users].sort((a, b) => a.age - b.age || a.name.localeCompare(b.name));
 console.log(sortedByAgeThenName);
+//Exercises 14 : mapping and filtering objects
+const userss = [
+  { name: "Zoe", age: 30 },
+  { name: "Adam", age: 25 },
+  { name: "Charlie", age: 30 }
+];
+//a 
+const names = userss.map(user => user.name);
+console.log(names);
+//b
+const olderThan28 = userss.filter(user => user.age > 28);
+console.log(olderThan28);

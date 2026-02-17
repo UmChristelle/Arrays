@@ -165,3 +165,14 @@ console.log(names);
 //b
 const olderThan28 = userss.filter(user => user.age > 28);
 console.log(olderThan28);
+// Exercises 15 : creating  and Acessing a matrix
+//a
+let gameBoard = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
+//b
+gameBoard[1][1] = 1;
+//c
+console.log(gameBoard[0][2]);

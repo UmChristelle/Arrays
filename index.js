@@ -223,3 +223,14 @@ const data = [1, 5, 2, 8, 5, 1, 9, 2];
 
 const uniqueData = data.filter((value, index) => data.indexOf(value) === index);
 console.log(uniqueData);
+//Challenge 2: Recreate reduce Using a Loop
+function myReduce(array, callback, initialValue) {
+  let accumulator = initialValue;
+  for (let i = 0; i < array.length; i++) {
+    accumulator = callback(accumulator, array[i], i, array);
+  }
+  return accumulator;
+}
+
+const sums = myReduce([1, 2, 3, 4, 5], (acc, val) => acc + val, 0);
+console.log(sums);

@@ -44,3 +44,14 @@ const spreadCopy = [...originalScores];
 spreadCopy[spreadCopy.length - 1] = 50;
 console.log(originalScores);
 console.log(spreadCopy);
+// section B searching &checking
+//exercises 4 :Finding Elements by Value and Index
+const studentNames = ["Alice", "Bob", "Charlie", "Alice", "David"];
+//a
+console.log(studentNames.indexOf("Alice"));
+//b
+console.log(studentNames.lastIndexOf("Alice"));
+//c
+console.log(studentNames.includes("Charlie"));
+//d
+console.log(studentNames.includes("Eve"));

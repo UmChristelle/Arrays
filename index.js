@@ -218,3 +218,8 @@ console.log(cart);
 //c
 cart = cart.filter(item => item.id !== 2);
 console.log(cart);
+//Challenge 1: Remove Duplicates Without Set
+const data = [1, 5, 2, 8, 5, 1, 9, 2];
+
+const uniqueData = data.filter((value, index) => data.indexOf(value) === index);
+console.log(uniqueData);

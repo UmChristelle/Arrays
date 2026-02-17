@@ -76,3 +76,25 @@ console.log(userAges.some(age => age < 18));
 console.log(userAges.every(age => age >= 18));
 //c
 console.log(userAges.some(age => age % 5 === 0));
+//Exercises 7 : Sorting and Reversing
+
+let dataPoints = [42, 10, 500, 2, 77];
+//a
+let ascending = [...dataPoints].sort((a, b) => a - b);
+console.log(ascending);
+//b
+let descending = [...dataPoints].sort((a, b) => b - a);
+console.log(descending);
+//c
+dataPoints.reverse();
+console.log(dataPoints);
+//Exercises 8: Concatenation, Joining, and Slicing
+const arr1 = ["A", "B"];
+const arr2 = ["C", "D"];
+const sentenceParts = ["Hello", "world", "this", "is", "great"];
+//a
+console.log(arr1.concat(arr2));
+//b
+console.log(sentenceParts.join(" "));
+//c
+console.log(sentenceParts.slice(1, 4));

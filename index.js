@@ -106,13 +106,13 @@ console.log(nestedList.flat());
 console.log(nestedList.flat(Infinity));
 //section D
 // Exercises 10: Mapping Data (map)
-const pricesUSD = [10.50, 20.00, 5.25];
+const pricesUSDs = [10.50, 20.00, 5.25];
 const exchangeRate = 1.3;
 //a
-const localPrices = pricesUSD.map(price => price * exchangeRate);
+const localPrices = pricesUSDs.map(price => price * exchangeRate);
 console.log(localPrices);
 //b
-const priceStrings = pricesUSD.map(price => `Item price: $${price.toFixed(2)}`);
+const priceStrings = pricesUSDs.map(price => `Item price: $${price.toFixed(2)}`);
 console.log(priceStrings);
 // Exercises 11 : Filtering Data (filter)
 const testScores = [45, 78, 92, 30, 65, 88];
@@ -123,3 +123,20 @@ console.log(passing);
 const average = testScores.reduce((sum, score) => sum + score, 0) / testScores.length;
 const belowAverage = testScores.filter(score => score < average);
 console.log(belowAverage);
+//Exercises 12 : Aggregating Data (reduce)
+let pricesUSD = [10.50, 20.00, 5.25];
+// a
+const totalCost = pricesUSD.reduce((total, price) => {
+  return total + price;
+}, 0);
+console.log("Total Cost:", totalCost);
+// b
+const maxPrice = pricesUSD.reduce((max, price) => {
+  return price > max ? price : max;
+}, pricesUSD[0]);
+console.log("Maximum Price:", maxPrice);
+// c
+const countGreaterThan15 = pricesUSD.reduce((count, price) => {
+  return price > 15 ? count + 1 : count;
+}, 0);
+console.log("Prices greater than $15:", countGreaterThan15);

@@ -140,3 +140,16 @@ const countGreaterThan15 = pricesUSD.reduce((count, price) => {
   return price > 15 ? count + 1 : count;
 }, 0);
 console.log("Prices greater than $15:", countGreaterThan15);
+//Section E
+//Exercises 13 : sorting objects
+let users = [
+  { name: "Zoe", age: 30 },
+  { name: "Adam", age: 25 },
+  { name: "Charlie", age: 30 }
+];
+//a
+let sortedByAge = [...users].sort((a, b) => a.age - b.age);
+console.log(sortedByAge);
+//b
+let sortedByAgeThenName = [...users].sort((a, b) => a.age - b.age || a.name.localeCompare(b.name));
+console.log(sortedByAgeThenName);
